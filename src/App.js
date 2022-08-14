@@ -165,7 +165,7 @@ const App = () => {
               }, 5000)
             })
           .catch(error => {
-            setError(`Information of ${newName} has already been removed from server`)
+            setError(error.response.data.error)
             setTimeout(() => {
               setError('')
             }, 8000)
